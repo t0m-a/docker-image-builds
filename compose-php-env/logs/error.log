@@ -1,0 +1,51 @@
+2018/05/30 23:18:27 [error] 5#5: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 181.115.248.187, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "34.238.244.111", referrer: "http://34.238.244.111/"
+2018/05/30 23:18:34 [error] 5#5: *1 open() "/usr/share/nginx/html/phpmyadmin" failed (2: No such file or directory), client: 181.115.248.187, server: localhost, request: "GET /phpmyadmin HTTP/1.1", host: "34.238.244.111"
+2018/05/30 23:19:36 [error] 5#5: *1 "/usr/share/nginx/html/phpmyadmin/index.html" is not found (2: No such file or directory), client: 181.115.248.187, server: localhost, request: "GET /phpmyadmin/ HTTP/1.1", host: "34.238.244.111"
+2018/06/10 15:49:21 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/06/10 15:49:32 [error] 8#8: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2018/06/10 15:49:32 [error] 8#8: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2018/06/10 15:49:38 [error] 8#8: *1 open() "/usr/share/nginx/html/index.php" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /index.php HTTP/1.1", host: "127.0.0.1"
+2018/06/10 15:50:13 [error] 8#8: *7 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2018/06/10 15:50:14 [error] 8#8: *7 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: _, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2018/06/10 15:51:59 [warn] 28#28: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/06/10 15:52:03 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/06/10 15:55:33 [warn] 26#26: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/06/10 15:55:37 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/06/10 15:57:04 [error] 7#7: *1 open() "/html/index.html" failed (13: Permission denied), client: 172.18.0.1, server: _, request: "GET /index.html HTTP/1.1", host: "127.0.0.1"
+2018/06/10 15:57:18 [error] 7#7: *3 FastCGI sent in stderr: "Unable to open primary script: /html/index.php (Permission denied)" while reading response header from upstream, client: 172.18.0.1, server: localhost, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "127.0.0.1"
+2018/06/10 16:00:17 [error] 60#60: *6 open() "/html/index.html" failed (13: Permission denied), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2018/06/10 16:00:17 [error] 60#60: *6 open() "/html/index.html" failed (13: Permission denied), client: 172.18.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2018/06/11 15:58:48 [error] 9#9: *1 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2018/06/11 15:58:48 [error] 9#9: *1 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1"
+2018/06/11 17:31:06 [emerg] 1#1: invalid number of arguments in "location" directive in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 17:33:37 [emerg] 1#1: invalid number of arguments in "location" directive in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 17:35:18 [emerg] 117#117: invalid number of arguments in "location" directive in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 17:35:54 [emerg] 126#126: invalid number of arguments in "location" directive in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 17:36:39 [emerg] 135#135: invalid number of arguments in "location" directive in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 17:36:53 [emerg] 144#144: invalid number of arguments in "location" directive in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 17:38:36 [emerg] 153#153: invalid location modifier "location" in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 17:39:18 [emerg] 162#162: invalid location modifier "location" in /etc/nginx/sites-enabled/site-pma.conf:9
+2018/06/11 18:01:19 [emerg] 27#27: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/sites-enabled/site-pma.conf:12
+2018/06/11 18:02:25 [emerg] 36#36: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/sites-enabled/site-pma.conf:12
+2018/06/11 18:02:57 [emerg] 45#45: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/sites-enabled/site-pma.conf:12
+2018/06/11 18:22:25 [emerg] 23#23: invalid parameter "permanentt" in /etc/nginx/sites-enabled/site-pma.conf:10
+2018/06/11 18:22:37 [emerg] 36#36: unknown "phpmyadmin" variable
+2018/06/11 19:50:19 [emerg] 24#24: unexpected end of file, expecting "}" in /etc/nginx/sites-enabled/site-pma.conf:18
+2018/06/11 19:53:01 [emerg] 23#23: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/sites-enabled/site-pma.conf:15
+2018/06/11 19:54:27 [emerg] 36#36: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/sites-enabled/site-pma.conf:15
+2018/06/11 19:59:00 [emerg] 23#23: unexpected "}" in /etc/nginx/sites-enabled/site-pma.conf:20
+2018/06/11 20:58:19 [emerg] 24#24: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/sites-enabled/site-pma.conf:10
+2018/06/11 21:08:43 [emerg] 23#23: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/sites-enabled/site-pma.conf:10
+2018/06/11 21:45:03 [error] 8#8: *8 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/06/12 22:22:57 [alert] 1#1: worker process 8 exited on signal 9
+2018/06/12 22:22:57 [alert] 1#1: worker process 7 exited on signal 9
+2018/06/12 22:22:57 [alert] 1#1: worker process 10 exited on signal 9
+2018/06/12 22:22:57 [alert] 1#1: worker process 9 exited on signal 9
+2018/06/12 22:25:44 [error] 7#7: *3 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/06/12 22:25:44 [error] 9#9: *5 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/06/12 22:51:54 [error] 7#7: *10 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2018/06/12 22:51:54 [error] 7#7: *10 open() "/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2019/10/27 15:12:06 [error] 6#6: *1 open() "/html/favicon.ico" failed (2: No such file or directory), client: 181.115.248.57, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "tsimon.site:88", referrer: "http://tsimon.site:88/"
+2019/10/27 15:12:30 [error] 6#6: *9 open() "/html/favicon.ico" failed (2: No such file or directory), client: 181.115.248.57, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "tsimon.site:4443", referrer: "https://tsimon.site:4443/"
+2019/10/27 15:12:44 [error] 6#6: *9 "/html/phpmyadmin/index.php" is not found (2: No such file or directory), client: 181.115.248.57, server: localhost, request: "GET /phpmyadmin/ HTTP/1.1", host: "tsimon.site:4443"
+2019/10/27 15:13:14 [error] 6#6: *9 "/html/html/index.php" is not found (2: No such file or directory), client: 181.115.248.57, server: localhost, request: "GET /html/ HTTP/1.1", host: "tsimon.site:4443"

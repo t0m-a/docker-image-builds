@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+ web:
+   environment:
+     - HOSTNAME=web
+   image: nginx:latest
+   restart: always
+   ports:
+     - "80:80"
+     - "443:443"
+   volumes:
+     - ./nginx.conf/nginx.conf:/etc/nginx/nginx.conf
+     - /var/www:/html
+     - ./site.conf:/etc/nginx/sites-enabled
+     - ./certs:/certs
+     - ./logs:/var/log/nginx
+     - ./mime.types/mime.types:/etc/nginx/mime.types
+   networks:
+     - webserver-network
+
+ php:
+   environment:
+     - HOSTNAME=php
+   image: php:fpm
+   restart: always
+   volumes:
+     - /var/www:/html
+     - ./php-log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+   networks:
+     - webserver-network
+
+networks:
+ webserver-network:
+     driver: bridge

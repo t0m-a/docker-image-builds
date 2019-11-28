@@ -1,0 +1,58 @@
+version: '3'
+
+services:
+ web:
+   image: nginx:latest
+   restart: always
+   ports:
+     - "88:88"
+     - "4443:4443"
+   volumes:
+     - ./nginx.conf/nginx.conf:/etc/nginx/nginx.conf
+     - ./html:/html
+     - ./site.conf:/etc/nginx/sites-enabled
+     - ./certs:/certs
+     - ./logs:/var/log/nginx
+     - ./mime.types/mime.types:/etc/nginx/mime.types
+   networks:
+     - lemp-network
+
+ php:
+   image: php:fpm
+   restart: always
+   volumes:
+     - ./html:/html
+     - ./php-log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+   networks:
+     - lemp-network
+ db:
+   image: mariadb:latest
+   restart: always
+   ports:
+     - "3306:3306"
+   volumes:
+     - ./db-data:/var/lib/mysql
+   environment:
+     - MYSQL_ROOT_PASSWORD=test
+   networks:
+     - lemp-network
+
+ phpmyadmin:
+  image: phpmyadmin/phpmyadmin:latest
+  restart: always
+  ports:
+     - "8080:4443"
+  volumes:
+     - ./pma.conf/nginx.conf:/etc/nginx.conf
+     - ./logs:/var/log/nginx
+     - ./certs:/certs
+  environment:
+     - MYSQL_USERNAME:root
+     - MYSQL_ROOT_PASSWORD:test
+     - PMA_HOST:db
+  networks:
+     - lemp-network
+
+networks:
+ lemp-network:
+     driver: bridge  

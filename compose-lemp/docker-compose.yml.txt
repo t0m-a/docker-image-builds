@@ -1,0 +1,67 @@
+version: '3'
+
+services:
+ web:
+   environment:
+     - HOSTNAME=web
+   image: nginx:latest
+   restart: always
+   ports:
+     - "80:80"
+     - "443:443"
+   volumes:
+     - ./nginx.conf/nginx.conf:/etc/nginx/nginx.conf
+     - /efs/www:/html
+     - ./site.conf:/etc/nginx/sites-enabled
+     - ./certs:/certs
+     - ./logs:/var/log/nginx
+     - ./mime.types/mime.types:/etc/nginx/mime.types
+   networks:
+     - webserver-network
+
+ php:
+   environment:
+     - HOSTNAME=php
+   image: php:fpm
+   restart: always
+   volumes:
+     - /efs/www:/html
+     - ./php-log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+   networks:
+     - webserver-network
+ db:
+   environment:
+     - HOSTNAME=db
+   image: mariadb:latest
+   restart: always
+   ports:
+     - "3306:3306"
+   volumes:
+     - /efs/db:/var/lib/mysql
+   environment:
+     - MYSQL_ROOT_PASSWORD=test
+   networks:
+     - webserver-network
+
+ phpmyadmin:
+  environment:
+     - HOSTNAME=phpmyadmin
+  image: phpmyadmin/phpmyadmin:latest
+  restart: always
+  ports:
+     - "8080:8080"
+  volumes:
+     - ./pma.conf/nginx.conf:/etc/nginx.conf
+     - ./logs:/var/log/nginx
+     - ./certs:/certs
+  environment:
+     - MYSQL_USERNAME:root
+     - MYSQL_ROOT_PASSWORD:test
+     - PMA_HOST:db
+  networks:
+     - webserver-network
+
+networks:
+ webserver-network:
+     driver: bridge
+
